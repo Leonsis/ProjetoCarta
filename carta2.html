@@ -54,10 +54,21 @@
                 Venha ver um pouco sobre Caio Leonni e Brenda Eduarda <a href="https://leonsis.github.io/projetoAlbum/">Aqui</a>
             </p>
             
-            <audio id="minhaMusica" controls autoplay>
+            <audio id="meuAudio" controls autoplay muted>
                 <source src="musica/Rubel _QuandoBateAquelaSaudade.mp3" type="audio/mp3">
                 Seu navegador não suporta o elemento de áudio.
-            </audio>            
+              </audio>
+              
+              <script>
+                document.addEventListener('click', function() {
+                  const audio = document.getElementById('meuAudio');
+                  if(audio.muted) {
+                    audio.muted = false;
+                    audio.volume = 1.0;
+                  }
+                }, { once: true });
+              </script>
+                          
         </div>
     </div>
     <script src="js/script.js"></script>
