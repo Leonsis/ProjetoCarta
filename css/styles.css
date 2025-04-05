@@ -1,62 +1,71 @@
+/* styles.css */
 body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to right, #ffe4e1, #fff0f5);
+    color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: white;
-    font-family: Arial, sans-serif;
 }
 
 .container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
     text-align: center;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    background-color: #ff4757;
+#btn {
+    background-color: #e91e63;
     color: white;
-    border-radius: 5px;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-    background-color: #ff6b81;
+#btn:hover {
+    background-color: #d81b60;
 }
 
 #heart {
-    display: none; /* Inicialmente oculto */
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-#heart.visible {
-    display: flex; /* Exibe o coração quando a classe "visible" é adicionada */
+    background-color: white;
+    padding: 40px 30px;
+    margin-top: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    position: relative;
 }
 
 #heart span {
-    font-size: 100px;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
     animation: pulse 1.5s infinite;
 }
 
-#heart p {
-    font-size: 18px;
-    color: #333;
-    max-width: 400px;
-    margin-top: 20px;
+#heart a {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#heart a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
 }
 
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
-}
-
-.hidden {
-    display: none; /* Oculta o elemento */
 }
