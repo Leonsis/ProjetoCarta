@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carta para Brenda</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <button id="btn">Abrir carta!</button>
+            <div id="heart" class="hidden" style="margin-top: 40px;">
+                <span>❤️</span>
+                <p>
+                    Eu sei que estamos passando por um momento difícil e que estamos nos esforçando 
+                    ao máximo para sermos fortes. Muitas coisas estão acontecendo, 
+                    e não da forma que esperávamos. Ontem, ficamos a noite conversando, 
+                    lembrando das coisas boas e nos apegando a elas.
+                    <br>
+                    <br>
+                    Mas teve uma coisa que nos conversamos que não foi a primeira vez: 
+                    não é preciso fazer algo extraordinário para te deixar feliz. 
+                    Eu demorei pra entender isso, demorei mesmo, porque, para mim, você é o extraordinário. 
+                    E é por isso que eu sempre me cobrei tanto.
+                    <br>
+                    <br>
+                    Quando eu falei sobre a queda, que ela me fez refletir muito sobre a minha vida. 
+                    E o que mais me marcou foi pensar em você — em como e o quanto eu te amo. 
+                    Eu não estava preocupado com a cirurgia, 
+                    nem se eu ia viver mancando ou qualquer coisa assim. 
+                    Minha única preocupação era se você teria que passar mais uma noite no 
+                    hospital comigo, me vendo da quele jeito, ou se eu te veria chorando no meu colo outra vez.
+                    Quando acordei de noite no hospital e te vi chorando, eu não aguentei.
+                    Foi ali que percebi que já tinha demorado demais pra fazer o que eu queria. 
+                    E agora eu sei que não quero — e não posso — esperar mais meses pra isso. 
+                    Eu te amo muito.
+                    <br>
+                    <br>
+                    Brenda Eduarda Cardoso da Costa, quer se casar comigo?
+                </p>
+                <p>
+                    <br><br>
+                    Atenciosamente,
+                    <br><br>
+                    Seu noivo,
+                    <br><br>
+                    Caio Leonni Santana e Silva ❤️
+                </p>
+                
+                <audio id="meuAudio" controls autoplay muted style="display: none;">
+                    <source src="musica/Rubel _QuandoBateAquelaSaudade.mp3" type="audio/mp3">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                
+                <script>
+                    document.addEventListener('click', function() {
+                        const audio = document.getElementById('meuAudio');
+                        if (audio.muted) {
+                            audio.muted = false;
+                            // Tenta reproduzir novamente para garantir que o som seja ativado
+                            audio.play().catch(error => {
+                                console.log('Erro ao reproduzir:', error);
+                            });
+                        }
+                    }, { once: true });
+                </script>
+                
+                            
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
